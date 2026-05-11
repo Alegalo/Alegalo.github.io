@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex [Last Name]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F8F7F3;
+      --text: #1A1A18;
+      --text-muted: #6B6B65;
+      --accent: #3A6B8A;
+      --border: #D8D6CF;
+      --max-width: 720px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      padding: 0 2rem;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      padding: 5.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 0.8rem;
+    }
+
+    .role {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-bottom: 1.75rem;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 500px;
+      line-height: 1.55;
+    }
+
+    nav {
+      margin-top: 2.25rem;
+      display: flex;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 400;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Research */
+    .research-text {
+      font-size: 1rem;
+      line-height: 1.85;
+      max-width: 640px;
+      color: var(--text);
+    }
+
+    .research-text p + p { margin-top: 1.1rem; }
+
+    .research-text strong {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* Publications */
+    .pub {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+      padding: 1.6rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .pub:first-of-type { border-top: none; padding-top: 0; }
+
+    .pub-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-title a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .pub-title a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .pub-tag {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--text-muted);
+      font-weight: 400;
+      flex-shrink: 0;
+      position: relative;
+      top: -1px;
+    }
+
+    .pub-tag.preprint {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .pub-meta {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .pub-authors {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Contact */
+    .availability-note {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 500px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem 2rem;
+    }
+
+    .contact-item .contact-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+
+    .contact-item a {
+      font-size: 0.9rem;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
+      display: inline-block;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 560px) {
+      body { padding: 0 1.25rem; }
+      header { padding: 3.5rem 0 2.5rem; }
+      section { padding: 3rem 0; }
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="name">Alex [Last Name]</div>
+      <div class="role">Researcher &nbsp;&middot;&nbsp; Reinforcement Learning &amp; Decision-Making under Uncertainty</div>
+      <p class="tagline">Studying the structure of epistemic behavior in partially observed environments.</p>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <a href="[CV_URL]" target="_blank">CV &nbsp;&nearr;</a>
+      </nav>
+    </header>
+
+    <section id="research">
+      <div class="section-label">Research</div>
+      <div class="research-text">
+        <p>
+          My work addresses how learning agents in partially observed environments acquire and preserve
+          epistemic behavior — the structured, information-seeking patterns that make agents effective
+          under uncertainty. I am interested in both the theoretical foundations of this behavior and
+          its practical implications for the deployment and auditing of trained policies.
+        </p>
+        <p>
+          My current research introduces the <strong>Behavioural Representation and Preservation (BRP)</strong>
+          framework, which formalizes epistemic behavior through probe-conditioned behavioral dependency.
+          A central result is a structural non-preservation theorem: epistemic behavior is not generally
+          maintained under common RL transformations, including convex aggregation and gradient-based
+          optimization under skewed priors. This has direct consequences for how we interpret and trust
+          policies trained in partially observed settings.
+        </p>
+        <p>
+          I am particularly interested in healthcare and clinical decision support as application domains,
+          where epistemic failure carries real cost and the need for auditable behavior is high.
+        </p>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-label">Publications</div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2602.21424" target="_blank">
+            On the Structural Non-Preservation of Epistemic Behavior Under Policy Transformation
+          </a>
+          <span class="pub-tag preprint">Preprint</span>
+        </div>
+        <div class="pub-authors">Alex [Last Name]</div>
+        <div class="pub-meta">Under review &mdash; Reinforcement Learning Conference 2026 &nbsp;&middot;&nbsp; arXiv:2602.21424</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#">[Title &mdash; Data Mining and Knowledge Discovery 2025]</a>
+        </div>
+        <div class="pub-authors">Alex [Last Name] [et al.]</div>
+        <div class="pub-meta">Data Mining and Knowledge Discovery, 2025</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#">[Title &mdash; Knowledge-Based Systems 2023]</a>
+        </div>
+        <div class="pub-authors">Alex [Last Name] [et al.]</div>
+        <div class="pub-meta">Knowledge-Based Systems, 2023</div>
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <div class="section-label">Contact</div>
+      <p class="availability-note">
+        I am currently open to postdoctoral positions and research collaborations,
+        particularly in reinforcement learning, sequential decision-making, and AI for healthcare.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <a href="mailto:[your@email.com]">[your@email.com]</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">arXiv</div>
+          <a href="https://arxiv.org/abs/2602.21424" target="_blank">arXiv:2602.21424</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Google Scholar</div>
+          <a href="#" target="_blank">[Scholar link]</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">LinkedIn</div>
+          <a href="#" target="_blank">[LinkedIn]</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">GitHub</div>
+          <a href="#" target="_blank">[GitHub]</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Alex [Last Name]</span>
+      <span>PhD, Halmstad University, 2023</span>
+    </footer>
+
+  </div>
+</body>
+</html>
