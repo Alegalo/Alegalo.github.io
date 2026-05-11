@@ -377,7 +377,15 @@
       <div class="contact-grid">
         <div class="contact-item">
           <div class="contact-label">Email</div>
-          <a href="mailto:alexander.galozy@yahoo.de">alexander.galozy@yahoo.de</a>
+          <a href="#" id="email-link">alexander.galozy&#91;at&#93;yahoo.de</a>
+          <script>
+            (function(){
+              var u='alexander.galozy',d='yahoo.de';
+              var el=document.getElementById('email-link');
+              el.href='mailto:'+u+'@'+d;
+              el.textContent=u+'@'+d;
+            })();
+          </script>
         </div>
         <div class="contact-item">
           <div class="contact-label">Google Scholar</div>
