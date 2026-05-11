@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexander Galozy, PhD</title>
+  <title>Alexander Galozy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -253,7 +253,7 @@
     <header>
       <div class="name">Alexander Galozy</div>
       <div class="role">Researcher &nbsp;&middot;&nbsp; Reinforcement Learning &amp; Decision-Making under Uncertainty</div>
-      <p class="tagline">Studying the structure of epistemic behavior in partially observed environments.</p>
+      <p class="tagline">I study how intelligent agents acquire and lose information-seeking behavior under uncertainty.</p>
       <nav>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
@@ -272,14 +272,6 @@
           its practical implications for the deployment and auditing of trained policies.
         </p>
         <p>
-          My current research introduces the <strong>Behavioural Representation and Preservation (BRP)</strong>
-          framework, which formalizes epistemic behavior through probe-conditioned behavioral dependency.
-          A central result is a structural non-preservation theorem: epistemic behavior is not generally
-          maintained under common RL transformations, including convex aggregation and gradient-based
-          optimization under skewed priors. This has direct consequences for how we interpret and trust
-          policies trained in partially observed settings.
-        </p>
-        <p>
           I am particularly interested in healthcare and clinical decision support as application domains,
           where epistemic failure carries real cost and the need for auditable behavior is high.
         </p>
@@ -289,31 +281,89 @@
     <section id="publications">
       <div class="section-label">Publications</div>
 
+      <div style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);font-weight:500;margin-bottom:1.2rem;">Reinforcement learning &amp; decision-making</div>
+
       <div class="pub">
         <div class="pub-title">
-          <a href="https://arxiv.org/abs/2602.21424" target="_blank">
-            On the Structural Non-Preservation of Epistemic Behavior Under Policy Transformation
-          </a>
-          <span class="pub-tag preprint">Preprint</span>
+          <a href="https://arxiv.org/abs/2602.21424" target="_blank">On the Structural Non-Preservation of Epistemic Behaviour under Policy Transformation</a>
+          <span class="pub-tag preprint">Under review</span>
         </div>
-        <div class="pub-authors">Alex [Last Name]</div>
-        <div class="pub-meta">Under review &mdash; Reinforcement Learning Conference 2026 &nbsp;&middot;&nbsp; arXiv:2602.21424</div>
+        <div class="pub-authors">Alexander Galozy</div>
+        <div class="pub-meta">arXiv:2602.21424 &nbsp;&middot;&nbsp; Reinforcement Learning Conference 2026</div>
       </div>
 
       <div class="pub">
         <div class="pub-title">
-          <a href="#">[Title &mdash; Data Mining and Knowledge Discovery 2025]</a>
+          <a href="https://scholar.google.com/citations?user=UHsHQ3QAAAAJ&hl=en" target="_blank">A New Bandit Setting Balancing Information from State Evolution and Corrupted Context</a>
         </div>
-        <div class="pub-authors">Alexander Galozy [et al.]</div>
+        <div class="pub-authors">Alexander Galozy, S&#322;awomir Nowaczyk, Mattias Ohlsson</div>
         <div class="pub-meta">Data Mining and Knowledge Discovery, 2025</div>
       </div>
 
       <div class="pub">
         <div class="pub-title">
-          <a href="#">[Title &mdash; Knowledge-Based Systems 2023]</a>
+          <a href="https://doi.org/10.1016/j.knosys.2022.110099" target="_blank">Information-Gathering in Latent Bandits</a>
         </div>
-        <div class="pub-authors">Alexander Galozy [et al.]</div>
-        <div class="pub-meta">Knowledge-Based Systems, 2023</div>
+        <div class="pub-authors">Alexander Galozy, S&#322;awomir Nowaczyk</div>
+        <div class="pub-meta">Knowledge-Based Systems 260, 2023</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="https://arxiv.org/abs/2310.00221" target="_blank">Beyond Random Noise: Insights on Anonymization Strategies from a Latent Bandit Study</a>
+        </div>
+        <div class="pub-authors">Alexander Galozy, Sadi Alawadi, Victor R. Kebande, S&#322;awomir Nowaczyk</div>
+        <div class="pub-meta">arXiv:2310.00221, 2023</div>
+      </div>
+
+      <div style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);font-weight:500;margin:2.5rem 0 1.2rem;">Healthcare applications</div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#" target="_blank">Factors Influencing Hospitalization or Emergency Department Visits and Mortality in Type 2 Diabetes Following the Onset of New Cardiovascular Diagnoses</a>
+        </div>
+        <div class="pub-authors">Björn Agvall, Jonas M. Jonasson, Alexander Galozy, Anders Halling</div>
+        <div class="pub-meta">Cardiovascular Diabetology 23(1), 2024</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#" target="_blank">Patterns and Predictors Associated with Long-Term Glycemic Control in Pediatric and Young Adult Patients with Type 1 Diabetes</a>
+        </div>
+        <div class="pub-authors">Johan Jendle, Björn Agvall, Alexander Galozy, Peter Adolfsson</div>
+        <div class="pub-meta">Journal of Diabetes Science and Technology 17(5), 2023</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#" target="_blank">Towards Understanding ICU Treatments Using Patient Health Trajectories</a>
+        </div>
+        <div class="pub-authors">Alexander Galozy, S&#322;awomir Nowaczyk, Anita Sant'Anna</div>
+        <div class="pub-meta">International Workshop on Knowledge Representation for Health Care, 2019</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#" target="_blank">Prediction and Pattern Analysis of Medication Refill Adherence through Electronic Health Records and Dispensation Data</a>
+        </div>
+        <div class="pub-authors">Alexander Galozy, S&#322;awomir Nowaczyk</div>
+        <div class="pub-meta">Journal of Biomedical Informatics 112, 2020</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#" target="_blank">Pitfalls of Medication Adherence Approximation through EHR and Pharmacy Records: Definitions, Data and Computation</a>
+        </div>
+        <div class="pub-authors">Alexander Galozy, S&#322;awomir Nowaczyk, Anita Sant'Anna, Mattias Ohlsson, Markus Lingman</div>
+        <div class="pub-meta">International Journal of Medical Informatics 136, 2020</div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">
+          <a href="#" target="_blank">Lonely Road: Speculative Challenges for a Social Media Robot Aimed to Reduce Driver Loneliness</a>
+        </div>
+        <div class="pub-authors">Federico Valle, Alexander Galozy, Awais Ashfaq, Kobra Etminani, Alexey Vinel, Martin Cooney</div>
+        <div class="pub-meta">ICWSM Workshops, 2021</div>
       </div>
 
     </section>
@@ -327,15 +377,11 @@
       <div class="contact-grid">
         <div class="contact-item">
           <div class="contact-label">Email</div>
-          <a href="mailto:[alex_galozy@yahoo.de]">[alex_galozy@yahoo.de]</a>
+          <a href="mailto:alexander.galozy@yahoo.de">alexander.galozy@yahoo.de</a>
         </div>
         <div class="contact-item">
           <div class="contact-label">Google Scholar</div>
-          <a href="#" target="_blank">https://scholar.google.com/citations?user=UHsHQ3QAAAAJ&hl=en</a>
-        </div>
-        <div class="contact-item">
-          <div class="contact-label">LinkedIn</div>
-          <a href="#" target="_blank">www.linkedin.com/in/alexander-galozy-14017811a</a>
+          <a href="https://scholar.google.com/citations?user=UHsHQ3QAAAAJ&hl=en" target="_blank">Scholar profile</a>
         </div>
       </div>
     </section>
